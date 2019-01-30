@@ -255,6 +255,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EmployeesForm.xaml.cs">
+      <DependentUpon>EmployeesForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\Seeder.cs" />
+    <Compile Include="Validations\CustomerValidation.cs" />
+    <Page Include="EmployeesForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

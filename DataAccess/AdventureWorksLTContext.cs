@@ -10,22 +10,26 @@ namespace DataAccess
         {
         }
 
+      
         public AdventureWorksLTContext(DbContextOptions<AdventureWorksLTContext> options)
             : base(options)
         {
         }
 
-        public virtual DbSet<Address> Address { get; set; }
-        public virtual DbSet<Customer> Customer { get; set; }
-        public virtual DbSet<CustomerAddress> CustomerAddress { get; set; }
-        public virtual DbSet<ErrorLog> ErrorLog { get; set; }
-        public virtual DbSet<Product> Product { get; set; }
-        public virtual DbSet<ProductCategory> ProductCategory { get; set; }
-        public virtual DbSet<ProductDescription> ProductDescription { get; set; }
-        public virtual DbSet<ProductModel> ProductModel { get; set; }
-        public virtual DbSet<ProductModelProductDescription> ProductModelProductDescription { get; set; }
-        public virtual DbSet<SalesOrderDetail> SalesOrderDetail { get; set; }
-        public virtual DbSet<SalesOrderHeader> SalesOrderHeader { get; set; }
+        public virtual DbSet<Address> Addresses { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<CustomerAddress> CustomerAddresses { get; set; }
+        public virtual DbSet<ErrorLog> ErrorLogs { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductCategory> ProductCategories { get; set; }
+        public virtual DbSet<ProductDescription> ProductDescriptions { get; set; }
+        public virtual DbSet<ProductModel> ProductModels { get; set; }
+        public virtual DbSet<ProductModelProductDescription> ProductModelProductDescriptions { get; set; }
+        public virtual DbSet<SalesOrderDetail> SalesOrderDetails { get; set; }
+        public virtual DbSet<SalesOrderHeader> SalesOrderHeaders { get; set; }
+
+        // add the new table Employee
+        public virtual DbSet<Employee> Employees { get; set; }
 
         // Unable to generate entity type for table 'dbo.BuildVersion'. Please see the warning messages.
 
