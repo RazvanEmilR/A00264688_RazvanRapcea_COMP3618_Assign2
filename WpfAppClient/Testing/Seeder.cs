@@ -1,13 +1,15 @@
 ﻿using DataAccess;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace WpfAppClient.Testing
 {
-    public class Seeder
+    public class Seeder 
     {
         private Random rnd;
         public Seeder()
@@ -108,7 +110,7 @@ namespace WpfAppClient.Testing
 
             if (success)
             {
-                Console.WriteLine("First 20 records have been seeded into the table.");
+                Console.WriteLine("First 20 records have beephoton seeded into the table.");
             }
             else
             {
@@ -128,5 +130,11 @@ namespace WpfAppClient.Testing
 
             return start.AddDays(rnd.Next(range));
         }
+
+        /*
+        private async Task UploadImageToDb(string imagePath)
+        {                     
+        }
+        */
     }
 }

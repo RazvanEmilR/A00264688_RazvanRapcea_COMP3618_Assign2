@@ -48,8 +48,8 @@ namespace WpfAppClient
 
             // DeleteCustomerById(6);
 
-            var seeder = new Seeder();
-            seeder.SeedTableEmployeesFirstTwenty(_context);
+           // var seeder = new Seeder();
+           // seeder.SeedTableEmployeesFirstTwenty(_context);
         }
 
         private void InsertCustomers(ICollection<Customer> customers)
@@ -229,6 +229,12 @@ namespace WpfAppClient
             {
                 Console.WriteLine("Could not find customer with id= " + id + ".");
             }
+        }
+
+        private void ButtonNagivateToEmployees_Click(object sender, RoutedEventArgs e)
+        {
+            var employeesWindow = new EmployeesForm();
+            employeesWindow.ShowDialog();
         }
     }
 }

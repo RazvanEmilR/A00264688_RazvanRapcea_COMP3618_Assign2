@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +20,26 @@ namespace WpfAppClient
     /// </summary>
     public partial class EmployeesForm : Window
     {
+        private AdventureWorksLTContext _context = new DataAccess.AdventureWorksLTContext();
+
         public EmployeesForm()
         {
             InitializeComponent();
         }
 
-       
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            var allEmployees = _context.Employees.ToList();
+
+            dataGrid1.ItemsSource = allEmployees;
+        }
+
+        private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Employee emp = (Employee)dataGrid1.SelectedItem;
+
+            var employeeWindow = new EmployeeForm(emp, _context);
+            employeeWindow.ShowDialog();
+        }
     }
 }

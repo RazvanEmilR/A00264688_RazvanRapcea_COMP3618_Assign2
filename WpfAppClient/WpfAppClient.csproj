@@ -255,11 +255,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EmployeeForm.xaml.cs">
+      <DependentUpon>EmployeeForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EmployeesForm.xaml.cs">
       <DependentUpon>EmployeesForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Testing\Seeder.cs" />
     <Compile Include="Validations\CustomerValidation.cs" />
+    <Page Include="EmployeeForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EmployeesForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -309,6 +316,17 @@
       <Project>{fc3cdf4e-55f9-4bc1-82b7-0b5405a134c7}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\img1.jpg" />
+    <Resource Include="Images\img2.jpg" />
+    <Resource Include="Images\img3.jpg" />
+    <Resource Include="Images\img4.jpg" />
+    <Resource Include="Images\img5.jpg" />
+    <Resource Include="Images\img6.jpg" />
+    <Resource Include="Images\img7.jpg" />
+    <Resource Include="Images\img8.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfAppClient.EmployeeForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppClient"
+        mc:Ignorable="d"
+        Title="EmployeeForm" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Grid>    
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                 <RowDefinition Height="Auto" />
+
+        </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="First Name:"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Last Name:"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="HomePhone:"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="BirthDate:"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="HireDate:"/>
+            <Label Grid.Row="5" Grid.Column="0" Content="Address:"/>
+            <Label Grid.Row="6" Grid.Column="0" Content="Notes:"/>
+
+            <TextBox x:Name="textBoxFirstName" Grid.Column="1" Grid.Row="0" Margin="3" Text="{Binding FirstName}" />
+            <TextBox x:Name="textBoxLastName" Grid.Column="1" Grid.Row="1" Margin="3" Text="{Binding LastName}" />
+            <TextBox x:Name="textBoxHomePhoneNumber" Grid.Column="1" Grid.Row="2" Margin="3" Text="{Binding HomePhone}" />
+            <TextBox x:Name="textBoxBirthDate" Grid.Column="1" Grid.Row="3" Margin="3" Text="{Binding BirthDate}" />
+            <TextBox x:Name="textBoxHireDate" Grid.Column="1" Grid.Row="4" Margin="3" Text="{Binding HireDate}" />
+            <TextBox x:Name="textBoxAddress" Grid.Column="1" Grid.Row="5" Margin="3" Text="{Binding Address}" />
+            <TextBox x:Name="textBoxNotes" Grid.Column="1" Grid.Row="6" Margin="3" Text="{Binding Notes}" />
+
+        
+        <Button x:Name="btnSave" Content="Save" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="216,162,0,-193" Grid.Row="7" VerticalAlignment="Top" Width="124" Click="BtnSave_Click" />
+        <Label x:Name="labelErrorMessage" Content="ErrorMessage" Grid.Column="1" HorizontalAlignment="Center" Height="Auto" Margin="0,100,0,0" Grid.Row="7" VerticalAlignment="Top" Width="124"  />
+        </Grid>
+</Window>
